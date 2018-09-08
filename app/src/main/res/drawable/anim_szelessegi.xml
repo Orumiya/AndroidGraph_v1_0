@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:id="@+id/szelessegi_anim1"
+    android:oneshot="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/sze0" android:duration="2000"/>
+    <item android:drawable="@drawable/sze1" android:duration="2000"/>
+    <item android:drawable="@drawable/sze2" android:duration="2000"/>
+    <item android:drawable="@drawable/sze3" android:duration="2000"/>
+    <item android:drawable="@drawable/sze4" android:duration="2000"/>
+    <item android:drawable="@drawable/sze5" android:duration="2000"/>
+    <item android:drawable="@drawable/sze6" android:duration="2000"/>
+    <item android:drawable="@drawable/sze7" android:duration="2000"/>
+    <item android:drawable="@drawable/sze8" android:duration="2000"/>
+    <item android:drawable="@drawable/sze9" android:duration="2000"/>
+    <item android:drawable="@drawable/sze10" android:duration="2000"/>
+    <item android:drawable="@drawable/sze11" android:duration="2000"/>
+    <item android:drawable="@drawable/sze12" android:duration="2000"/>
+    <item android:drawable="@drawable/sze13" android:duration="2000"/>
+    <item android:drawable="@drawable/sze14" android:duration="2000"/>
+</animation-list>

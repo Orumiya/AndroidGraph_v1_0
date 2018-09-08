@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:id="@+id/topologiai_anim1"
+    android:oneshot="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/top0" android:duration="2000"/>
+    <item android:drawable="@drawable/top1" android:duration="2000"/>
+    <item android:drawable="@drawable/top2" android:duration="2000"/>
+    <item android:drawable="@drawable/top3" android:duration="2000"/>
+    <item android:drawable="@drawable/top4" android:duration="2000"/>
+    <item android:drawable="@drawable/top5" android:duration="2000"/>
+    <item android:drawable="@drawable/top6" android:duration="2000"/>
+    <item android:drawable="@drawable/top7" android:duration="2000"/>
+    <item android:drawable="@drawable/top8" android:duration="2000"/>
+    <item android:drawable="@drawable/top9" android:duration="2000"/>
+    <item android:drawable="@drawable/top10" android:duration="2000"/>
+    <item android:drawable="@drawable/top11" android:duration="2000"/>
+    <item android:drawable="@drawable/top12" android:duration="2000"/>
+</animation-list>

@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp"
+    tools:context="mobilapp.kutatok.androidgraph.box.animacio_fragment">
+
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/animationFrame1"
+       android:scaleType="centerCrop"
+       />
+   <Button
+       android:id="@+id/animPlayButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:drawableLeft="@drawable/ic_action_playback_play"
+       android:text="Lejátszás"
+       android:textSize="40sp"
+       android:fontFamily="sans-serif"
+       android:textStyle="bold"
+       android:textColor="#294159"
+       android:background="@drawable/animationbutton"
+       android:layout_centerInParent="true"/>
+
+   <!-- az android:src-be jön a kép-->
+</RelativeLayout>

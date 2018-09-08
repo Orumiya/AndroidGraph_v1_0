@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:id="@+id/kruskal_anim1"
+    android:oneshot="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/kr0" android:duration="2000"/>
+    <item android:drawable="@drawable/kr1" android:duration="2000"/>
+    <item android:drawable="@drawable/kr2" android:duration="2000"/>
+    <item android:drawable="@drawable/kr3" android:duration="2000"/>
+    <item android:drawable="@drawable/kr4" android:duration="2000"/>
+    <item android:drawable="@drawable/kr5" android:duration="2000"/>
+    <item android:drawable="@drawable/kr6" android:duration="2000"/>
+    <item android:drawable="@drawable/kr7" android:duration="2000"/>
+    <item android:drawable="@drawable/kr8" android:duration="2000"/>
+</animation-list>

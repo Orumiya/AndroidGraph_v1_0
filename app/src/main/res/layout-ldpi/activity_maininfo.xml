@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/mainbackground"
+    tools:context="mobilapp.kutatok.androidgraph.Maininfo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo"
+                android:adjustViewBounds="true"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/mainline1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Az ANDROID GRAPH az Óbudai Egyetem Neumann János Informatikai Karának a 'Kutatók Éjszakája 2017' elnevezésű rendezvény keretében meghirdetett Mobil app fejlesztési versenyére készült tudománynépszerűsítési célzattal."
+                android:id="@+id/infoSzoveg"
+                android:textColor="#ffffff"
+                android:padding="10dp"
+                android:fontFamily="sans-serif"
+                android:textSize="12sp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/mainline1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Készítette:"
+                android:fontFamily="sans-serif"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:paddingLeft="30dp"
+                android:text="Kasza Eszter\nVass Ádám"
+                android:lineSpacingExtra="10dp"
+                android:fontFamily="sans-serif"
+                android:textSize="12sp"
+                android:textColor="#ffffff"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="Felhasznált források:"
+                android:fontFamily="sans-serif"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:fontFamily="sans-serif"
+                android:textSize="12sp"
+                android:text="Szénási Sándor - Algoritmusok, adatszerkezetek II. ÓE-NIK 5013"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="Nyílt forráskódú könyvtárak:"
+                android:fontFamily="sans-serif"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:fontFamily="sans-serif"
+                android:textSize="12sp"
+                android:text="https://github.com/Devlight/InfiniteCycleViewPager"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:fontFamily="sans-serif"
+                android:textSize="12sp"
+                android:text="Figyelmeztetés! Az app használata nem helyettesíti az előadásokon való részvétel élményét."/>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

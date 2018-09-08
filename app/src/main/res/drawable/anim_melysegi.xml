@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:id="@+id/melysegi_anim1"
+    android:oneshot="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/me0" android:duration="2000"/>
+    <item android:drawable="@drawable/me1" android:duration="2000"/>
+    <item android:drawable="@drawable/me2" android:duration="2000"/>
+    <item android:drawable="@drawable/me3" android:duration="2000"/>
+    <item android:drawable="@drawable/me4" android:duration="2000"/>
+    <item android:drawable="@drawable/me5" android:duration="2000"/>
+    <item android:drawable="@drawable/me6" android:duration="2000"/>
+    <item android:drawable="@drawable/me7" android:duration="2000"/>
+    <item android:drawable="@drawable/me8" android:duration="2000"/>
+
+</animation-list>

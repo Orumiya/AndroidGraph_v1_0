@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/mainbackground"
+    tools:context="mobilapp.kutatok.androidgraph.JatekValaszto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#C3CED8"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/pathFindingStart"
+            android:text="Indítás"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif"
+            android:textColor="#000000"
+            android:textAllCaps="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/buttongroupblack"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textAlignment="textEnd"
+                android:padding="10dp"
+                android:text="Találd meg a legrövidebb szállítási útvonalat a galaxisban, amelyen eljuttatod a megfelelő bolygókra a kért eszközöket. Az üzemanyag a legrövidebb megoldáshoz elegendő."/>
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/gamepathfinding"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gametabs"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Útkeresés"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="24sp"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Felfedezés"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="24sp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:fontFamily="sans-serif"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#496172"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/gamediscovery"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="#FFFFFF"
+                android:fontFamily="sans-serif"
+                android:textSize="17sp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="A játék célja egy galaxisokat átfogó kommunikációs hálózat kiépítése. Korlátozott erőforrásokból kell a lehető leghosszabb egybefüggő hálózatot kialakítani."/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/discoveryStart"
+            android:text="Indítás"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/buttongroup"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

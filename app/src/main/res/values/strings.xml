@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">AndroidGraph</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="leiras_szelessegi">A szélességi bejárás alapelve, hogy elsőként mindig a kiindulóponthoz legközelebbi csúcsokat dolgozza fel. A kezdőpont után az ettől egy élnyi távolságra lévő csúcsokat dolgozza fel (ezek feldolgozási sorrendje már tetszőleges lehet), majd ezt követően a két élnyi távolságra lévőket, stb. Az algoritmus alapja egy sor adatszerkezet. Ez a sor tartalmazza azokat a csúcsokat, amelyeket már elért az algoritmus, azonban még nem lettek feldolgozva.\n\nKezdetben a kiinduló csúcsot belerakjuk ebbe a sorba (2.sor) (egyúttal a feldolgozott elemeket tartalmazó F halmazba is - 3.sor), majd egy ciklus segítségével addig fut az algoritmus, amíg ez az S sor nem lesz üres (4.sor). Minden ciklus iterációnál kivesszük a soron következő elemet (5.sor), azt feldolgozzuk (6.sor). Majd az elem azon szomszédjait (7.sor), amelyeket eddig még nem értünk el (8.sor), belerakjuk a sorba a későbbi feldolgozás érdekében(9.sor).\n\nA szélességi bejárás csak egy komponens bejárására alkalmas. Ahhoz, hogy a gráf minden csúcsát elérje, akkor egy újabb ciklussal a bejárást meg kell hívni minden csúcsra (illetve csak azokra, amelyeket nem dolgoztak fel az előzőleg futtatott bejárások).</string>
+    <string name="leiras_graph_altalanos">A gráf olyan adatszerkezet, amely csúcsokból áll, és ezekből a csúcsokból tetszőleges számú él mutat a többi csúcs felé.\n\nA gráfok esetében általában nem határozunk meg egy olyan kitüntetett elemet (fej vagy gyökér néven),
+        mint amilyet láncolt listák, illetve fák esetén használtunk, sőt, irányított, illetve nem összefüggő gráfoknál még az sem biztos, hogy különböző csúcsokból kiindulva ugyanazokhoz a csúcsokhoz tudunk eljutni.\n\n
+
+Gráfok alapműveletei\n\n
+
+Műveletek a gráf szintjén (ahol G egy gráf, aminek típusa GRÁF):\n\n
+-	G.Csúcsok: Visszaadja a G gráf csúcsainak a listáját.\n\n
+-	G.Élek: Visszaadja a G gráf éleinek a listáját.\n\n
+Műveletek a csúcs szintjén (ahol x és y csúcsok, amelyek típusa CSP):\n\n
+-	x.VezetÉl(y): Vezet-e él az x csúcsból az y csúcsba?\n\n
+-	x.Szomszédok : Visszaadja az x csúcs szomszédait (azokat a csúcsokat, amelyekbe vezet él a megadott csúcsból).\n\n
+A gráf csúcsai esetében a tartalom (tart) mező a gráf csúcsában eltárolt objektumot jelenti, illetve a csúcsnak szükség esetén kulcs mezője is lehet.\n\n
+Súlyozott gráfok esetén x.Súly(y) függvény megmondja, hogy a megadott csúcsba milyen súlyú él vezet.\n\n
+
+Bejárások\n\n
+
+A gráfok esetében nem szoktunk kijelölni egy kitüntetett elemet, így a bejárás bármelyik csúcsból elindítható. A bejárás itt azonban nem az adatszerkezet összes elemének a feldolgozását jelenti, hanem csak azokat fogja elérni, amelyek az előbb említett kiindulópontból elérhetőek a gráf élei mentén. Az algoritmus bemenete egy csúcs, amelyből elindulunk. A futása közben az összes, ebből a csúcsból elérhető csúcsot fel fogja dolgozni.\n\n
+Minimális feszítőfa\n\n
+Egy súlyozott, irányítatlan, összefüggő gráf esetén olyan feszítőfát keresünk, ahol az élek összsúlya minimális. Egy gráfnak több minimális feszítőfája is lehet, ezek közül elég az egyiket megtalálnunk.
+</string>
+    <string name="leiras_melysegi">A mélységi bejárás algoritmusa addig halad előre a szomszédsági kapcsolatokon keresztül, amíg nem jut egy olyan csúcsra, ahonnan már nem tud továbblépni. Ilyenkor egy szinttel visszább lép, és az előző csúcsnál próbál keresni egy másik, még fel nem dolgozott szomszédot. Mindezt addig folytatja, amíg elfogynak a választható feldolgozatlan szomszédok.\n\n
+
+A mélységi bejárásnál verem segítségével tudjuk eltárolni a keresés során bejárt utat, amit rekurzívan oldunk meg.\n\n
+Szükségünk lesz egy F halmazra, amelyben a már feldolgozott csúcsokat fogjuk tárolni. A rekurzió indító eljárása törli az F halmaz tartalmát (11.sor), majd meghívja magát a rekurziót, első paraméterként átadva a kiinduló csúcsot (12.sor).\n\n
+Maga a rekurzió minden lefutásakor eltárolja az éppen feldolgozandó elemet az F halmazba (2.sor), majd elvégzi a paraméterként kapott csúcs feldolgozását (3.sor). A továbblépéshez megvizsgálja az aktuális csúcs szomszédait egy ciklus segítségével (4.sor), ahol akkor lép tovább, ha kiszemelt csúcsot még nem dolgoztuk fel, azaz nincs benne az F halmazban (5.sor). Amennyiben a szomszéd nincs benne az F-ben, akkor rekurzív módon újrahívja önmagát a függvény (6.sor).\n\n
+A mélységi bejárás is csak egy komponens bejárására alkalmas. Ahhoz, hogy a gráf minden csúcsát elérje, akkor egy újabb ciklussal a bejárást meg kell hívni minden csúcsra (illetve csak azokra, amelyeket nem dolgoztak fel az előzőleg futtatott bejárások).
+</string>
+    <string name="leiras_topologiai">Egy irányított gráf topológiai rendezése a csúcsoknak egy olyan sorba rendezése, amelyre igaz, hogy ha létezik (u,v) él a gráfban, akkor u megelőzi a sorban v-t. Ha a gráf tartalmaz irányított kört, akkor nincs ilyen sorba rendezés.\n\n
+
+Egy topológiai rendezés előállításához felhasználhatjuk a mélységi keresés azon változatát, amely tárolta az egyes csúcsok elérési és elhagyási idejét. Ilyenkor az egyes csúcsokat az elhagyás fordított sorrendjében soroljuk fel.
+Mivel a gráf nem biztos, hogy erősen összefüggő, így minden csúcsból el kell indítani a rekurzív bejárást.
+</string>
+    <string name="leiras_dijkstra">Két csúcs közti legrövidebb út keresésének gyakorlati problémájára ad megoldást Dijkstra algoritmusa. Adott egy súlyozott gráf, amelyben szeretnénk az egyik csúcsból kiinduló legrövidebb utakat megkeresni, azaz ahol az utakat alkotó élek összsúlya minimális. A gráf nem tartalmaz negatív súlyú éleket.\n\n
+
+Az algoritmus alapelve, hogy egy szélességi bejárással végignézi a kiinduló pontból elérhető összes csúcsot, és minden csúcs esetében eltárolja az oda vezető legrövidebb út hosszát, illetve ennek az útnak az előző elemét (tehát, hogy honnan jutottunk el a kérdéses csúcshoz).\n\n
+
+Az első ciklus a felhasznált adatszerkezetek inicializálását végzi (2.sor). A L hasító táblázat fogja tárolni az egyes csúcsokhoz eddig talált legrövidebb út hosszát, ennek minden elemét végtelenre állítjuk, mivel még nincsenek ilyen útjaink (3.sor). Az E hasító táblázat fogja tárolni, hogy az előbbi minimális úton az egyes csúcsokat melyik szomszédjukból értük el, kezdetben itt is minden érték ø lesz, mert még nem értük el a csúcsokat (4.sor). Az S prioritási sor kezdetben a gráf összes csúcsát tartalmazza (5.sor). Ez a sor később mindig a legkisebb távolsággal rendelkező csúcsot adja majd vissza.\n\n
+Ezt követően beállítjuk a kezdőcsúcsot. Mivel az L az ettől való távolságot fogja mindig mutatni, így a kezdőcsúcshoz tartozó értéket kinullázzuk (7.sor). A 8.sorban egy ciklus segítségével addig fut az algoritmus, amíg ez az S sor nem lesz üres. Minden ciklus iterációban ki kell vennünk a prioritási sorból a legkisebb távolsággal bíró csúcsot (9.sor).\n\n
+A következő ciklussal (10. sor) megvizsgáljuk ennek a csúcsnak a szomszédait, és beállítjuk azoknak is a távolsági adatait.\n\n
+Ezt követően ellenőrizzük, hogy az u csúcson keresztül elérve az x csúcsot rövidebb utat találunk-e, mint az eddig talált legrövidebb út (11.sor). Ha még az eddigiek során nem értük el az x-et, az L[x] értéke az inicializáláskor megadott végtelen, tehát biztos, hogy ennél csak rövidebb utat találhatunk a későbbiekben. Ha rövidebb utat találunk, módosítjuk az L értékét (12. sor), hogy az valóban helyesen mutassa, hogy mi az eddig talált legrövidebb út hossza. Másrészt módosítanunk kell az E értékét is (13. sor), hogy ezt a legrövidebb utat követve melyik csúcson keresztül értük el ezt a csúcsot.
+</string>
+    <string name="leiras_prim">Minimális feszítőfa előállítása során olyan feszítőfát keresünk, ahol az élek összsúlya minimális. A kezdőérték legyen egy olyan csúcs, ami biztosan a leendő feszítőfa része lesz majd. Ebből az alapállapotból kiindulva, egyesével adjuk hozzá az éleket a leendő feszítőfához. Olyan éleket keresünk, amelyeket hozzáadva az eddigi állapothoz, továbbra is a leendő feszítőfa egy része marad.\n\n
+
+Az algoritmus futása során egy ciklussal először végig megyünk az összes csúcson (2.sor), amelyben beállítjuk a kezdőértékeket az alábbi két listának: a csúcsokhoz tartozó legkönnyebb éleket tartalmazó lista (k) végtelen értékeket kap, az adott csúcsokba vezető legkönnyebb éleket megelőző csúcsok tárolására szolgáló lista (π) pedig üres (3.sor). A csúcsokat egy S prioritásos sorba helyezzük (4.sor). A kezdőcsúcsnak a k listában beállítjuk a 0-t kezdőértéknek (6.sor), ezáltal ez lesz a legelső elem, amit a prioritásos sorból kiveszünk.\n\n
+Egy ciklussal addig megyünk végig a csúcsok prioritásos során, amíg az üres nem lesz (7.sor).  A sorból mindig azt a csúcsot vesszük ki, ahova éppen a legkisebb súlyú él vezet (8.sor).  Ennek a csúcsnak megvizsgáljuk a szomszédait (9.sor). Ha a szomszéd csúcs még eleme a prioritásos sornak és az éppen vizsgált csúcsnak a szomszédjába vezető élsúlya kisebb, mint amennyit a k listában eddig tároltunk (10.sor), akkor felülírja a k listában az eddig tárolt súlyt (11.sor), illetve a megelőző csúcsokat tároló listába ehhez a szomszéd csúcshoz letárolja a vizsgált u csúcsot(12.sor). A függvény visszatérési értéke csúcsonként a legkönnyebb élhez tartozó előző csúcsot tárolja (16.sor).
+</string>
+    <string name="leiras_kruskal">Minimális feszítőfa előállítása során olyan feszítőfát keresünk, ahol az élek összsúlya minimális. A kezdőérték legyen egy olyan csúcs, ami biztosan a leendő feszítőfa része lesz majd. Ebből az alapállapotból kiindulva, egyesével adjuk hozzá az éleket a leendő feszítőfához. Olyan éleket keresünk, amelyeket hozzáadva az eddigi állapothoz, továbbra is a leendő feszítőfa egy része marad.\n\n
+
+Az algoritmus futása során egy ciklussal először a csúcsokat vesszük fel külön halmazokba (3.sor), majd egy következő ciklussal az éleket egy S prioritásos sorba (6.sor). Majd egy újabb ciklussal addig megyünk végig ezeknek az éleknek a során, amíg az üres nem lesz (8.sor).  A sorból mindig az éppen legkisebb súlyú élt vesszük ki (9.sor).  Az előzőleg létrehozott halmazok közül megkeresi azt, amelyikben az él két csúcsa szerepel, és ha ezek különböző halmazban vannak (10.sor), akkor az A halmazhoz hozzáadja az élt (11.sor) és a két csúcs halmazát összevonja (12.sor). A függvény visszatérési értéke az A halmaz, amely a minimális feszítőfa éleit tartalmazza (15.sor).
+</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/mainbackground"
+    tools:context="mobilapp.kutatok.androidgraph.Graph_altalanos">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_alignParentTop="true"
+                android:id="@+id/descriptionImage"
+                android:scaleType="fitXY"
+                android:src="@drawable/descr2"/>
+
+            <TextView
+                android:id="@+id/leirasText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:fontFamily="sans-serif"
+                android:layout_below="@id/descriptionImage"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:text="@string/leiras_graph_altalanos" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

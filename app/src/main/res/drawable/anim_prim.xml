@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:id="@+id/prim_anim1"
+    android:oneshot="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/pr0" android:duration="2000"/>
+    <item android:drawable="@drawable/pr1" android:duration="2000"/>
+    <item android:drawable="@drawable/pr2" android:duration="2000"/>
+    <item android:drawable="@drawable/pr3" android:duration="2000"/>
+    <item android:drawable="@drawable/pr4" android:duration="2000"/>
+    <item android:drawable="@drawable/pr5" android:duration="2000"/>
+    <item android:drawable="@drawable/pr6" android:duration="2000"/>
+    <item android:drawable="@drawable/pr7" android:duration="2000"/>
+    <item android:drawable="@drawable/pr8" android:duration="2000"/>
+</animation-list>
