@@ -12,6 +12,7 @@ public class EredmenyLista extends AppCompatActivity {
 
     ListView pathfinding, discovery;
 
+    //az adatbazisbol lekeri a 2 jatekhoz tartozo eredmenyeket
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

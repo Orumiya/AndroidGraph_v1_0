@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 public class Maininfo extends AppCompatActivity {
 
+    //megnyitja az adott layoutot - 3 felbontas kozul tud valasztani
+    // --> activity_maininfo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

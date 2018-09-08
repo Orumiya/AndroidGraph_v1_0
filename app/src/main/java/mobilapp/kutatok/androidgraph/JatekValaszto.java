@@ -12,6 +12,7 @@ import mobilapp.kutatok.androidgraph.games.Pathfinding;
 
 public class JatekValaszto extends AppCompatActivity {
 
+    //main screen, ahonnan intentekkel indítjuk a 2 játékot
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,7 @@ public class JatekValaszto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentDiscovery);
+                finish();
             }
         });
 
@@ -32,6 +34,7 @@ public class JatekValaszto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentPathFinding);
+                finish();
             }
         });
     }

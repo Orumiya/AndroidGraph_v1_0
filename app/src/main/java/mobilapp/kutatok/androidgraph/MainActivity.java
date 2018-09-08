@@ -14,11 +14,14 @@ import mobilapp.kutatok.androidgraph.games.SpanningTree1;
 
 public class MainActivity extends AppCompatActivity {
 
+    //a main activity csak annyit csinál, hogy intentekkel
+    //elindítja a 4 activityt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //algoritmusok leírása --> AlgoritmusLista.class
         LinearLayout algoritmusInditas = (LinearLayout) findViewById(R.id.startAlgorithm);
         final Intent intentAlgoritmus = new Intent(this,AlgoritmusLista.class);
         algoritmusInditas.setOnClickListener(new View.OnClickListener() {
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //játékindítás --> JatekValaszto.class
         LinearLayout jatekInditas = (LinearLayout) findViewById(R.id.startGames);
         final Intent intentJatek = new Intent(this,JatekValaszto.class);
         jatekInditas.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //eredmények kiiratasa --> EredmenyLista.class
         LinearLayout eredmenyKijelzoInditas = (LinearLayout) findViewById(R.id.startLeaderboard);
         final Intent intentLeaderboard = new Intent(this,EredmenyLista.class);
         eredmenyKijelzoInditas.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //info --> Maininfo.class
         LinearLayout infoInditas = (LinearLayout) findViewById(R.id.startAboutPage);
         final Intent intentInfo = new Intent(this,Maininfo.class);
         infoInditas.setOnClickListener(new View.OnClickListener() {

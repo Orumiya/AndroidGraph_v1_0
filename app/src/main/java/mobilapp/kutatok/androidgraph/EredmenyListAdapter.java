@@ -15,6 +15,8 @@ import java.util.List;
 
 public class EredmenyListAdapter extends BaseAdapter {
 
+    //a listán belül minden sornak egy layoutja van, hogy meg tudjon jelenteni több dolgot egyszerre
+    //az adapter arra kell, h tudja, azt a sort hogyan töltse fel
     private Context context;
     private List<Ranking>lstRanking;
     private int melyikJatek;
@@ -40,6 +42,7 @@ public class EredmenyListAdapter extends BaseAdapter {
         return position;
     }
 
+    //a lista 1 sorát megcsinálja
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

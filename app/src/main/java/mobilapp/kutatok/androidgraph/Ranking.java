@@ -3,7 +3,7 @@ package mobilapp.kutatok.androidgraph;
 /**
  * Created by Adam on 2017.08.30..
  */
-
+//a DB egy sorát jelképező objektum
 public class Ranking {
     private int Id;
     private int Score;
